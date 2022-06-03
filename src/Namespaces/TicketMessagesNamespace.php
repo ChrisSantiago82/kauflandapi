@@ -29,7 +29,7 @@ class TicketMessagesNamespace extends AbstractNamespace
 	public function post($ticketId, $text, $interimNotice = false, $claimMessageFiles = [])
 	{
 		$data = new TicketMessageAddTransfer();
-		$data->id_ticket = (int)$ticketId;
+		$data->id_ticket = $ticketId;
 		$data->text = $text;
 		$data->interim_notice = $interimNotice;
 		$data->claim_message_files = $claimMessageFiles;
